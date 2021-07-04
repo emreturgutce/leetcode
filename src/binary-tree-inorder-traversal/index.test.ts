@@ -1,13 +1,6 @@
 import { TreeNode, inorderTraversalWithStack, inorderTraversal } from './index';
 
 describe('Binary Tree Inorder Traversal', function () {
-  /**
-   * 			1
-   * 		  /	  \
-   * 	   null	   2
-   * 	 		 /   \
-   * 			3     null
-   */
   const node3 = new TreeNode(3, null, null);
   const node2 = new TreeNode(2, node3, null);
   const node1 = new TreeNode(1, null, node2);
