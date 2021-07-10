@@ -1,4 +1,5 @@
-import { TreeNode, inorderTraversalWithStack, inorderTraversal } from './index';
+import { TreeNode } from '@common/tree-node';
+import { inorderTraversalWithStack, inorderTraversal } from './index';
 
 describe('Binary Tree Inorder Traversal', function () {
   const node3 = new TreeNode(3, null, null);
