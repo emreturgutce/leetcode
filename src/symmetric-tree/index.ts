@@ -1,10 +1,10 @@
 import { TreeNode } from '@common/tree-node';
 
-export function isSymmetric(root: TreeNode | null): boolean {
+export function isSymmetric(root: Nullable<TreeNode>): boolean {
   return isMirror(root, root);
 }
 
-function isMirror(t1: TreeNode | null, t2: TreeNode | null): boolean {
+function isMirror(t1: Nullable<TreeNode>, t2: Nullable<TreeNode>): boolean {
   if (t1 === null && t2 === null) {
     return true;
   }

@@ -11,7 +11,7 @@
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "typeRoots": ["node_modules/@types"],
+    "typeRoots": ["node_modules/@types", "src/global.d.ts"],
     "types": ["node", "jest"],
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -21,6 +21,6 @@
       "@common/*": ["./src/common/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }

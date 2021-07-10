@@ -26,6 +26,10 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "@common/(.*)": "<rootDir>/src/common/$1",
+      "@src/(.*)": "<rootDir>/src/$1"
+    }
   }
 }

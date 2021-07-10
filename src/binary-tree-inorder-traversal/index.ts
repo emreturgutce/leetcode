@@ -4,13 +4,13 @@ import { TreeNode } from '@common/tree-node';
  * Time Complexity: O(n)
  * Space Complexity: O(logn)
  */
-export function inorderTraversal(root: TreeNode | null): number[] {
+export function inorderTraversal(root: Nullable<TreeNode>): number[] {
   const inorderNums: number[] = [];
   helper(root, inorderNums);
   return inorderNums;
 }
 
-function helper(root: TreeNode | null, numbers: number[] = []): void {
+function helper(root: Nullable<TreeNode>, numbers: number[] = []): void {
   if (root === null) {
     return;
   }
@@ -24,10 +24,10 @@ function helper(root: TreeNode | null, numbers: number[] = []): void {
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  */
-export function inorderTraversalWithStack(root: TreeNode | null): number[] {
+export function inorderTraversalWithStack(root: Nullable<TreeNode>): number[] {
   const inorderNums: number[] = [];
   const stack: TreeNode[] = [];
-  let curr: TreeNode | null = root;
+  let curr: Nullable<TreeNode> = root;
 
   while (curr !== null || stack.length) {
     while (curr !== null) {
