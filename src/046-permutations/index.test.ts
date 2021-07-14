@@ -1,6 +1,6 @@
 import { permute } from './index';
 
-describe.only('All possible permutations', function () {
+describe('All possible permutations', function () {
   it('Should calculate all possible permutations', function () {
     const permutations = permute([1, 2, 3]);
 
