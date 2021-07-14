@@ -1,6 +1,6 @@
 import { singleNumber } from './index';
 
-describe.only('Find the single one', function () {
+describe('Find the single one', function () {
   it('Should find the single number that has occurred in the array', function () {
     const num = singleNumber([2, 2, 1]);
 
