@@ -1,6 +1,6 @@
 import { subsets } from './index';
 
-describe.only('Subsets', function () {
+describe('Subsets', function () {
   it('should find all subsets of an array', function () {
     const nums = [1, 2, 3];
     const result = subsets(nums);
