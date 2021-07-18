@@ -10,11 +10,13 @@ function backtrack(
   curr: number[],
   result: number[][],
 ): void {
-  result.push([...curr]);
-
-  for (let i = idx; i < nums.length; i++) {
-    curr.push(nums[i]);
-    backtrack(i + 1, nums, curr, result);
-    curr.pop();
+  if (idx === nums.length) {
+    result.push([...curr]);
+    return;
   }
+
+  curr.push(nums[idx]);
+  backtrack(idx + 1, nums, curr, result);
+  curr.pop();
+  backtrack(idx + 1, nums, curr, result);
 }
