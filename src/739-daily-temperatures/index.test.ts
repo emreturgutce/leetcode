@@ -1,6 +1,6 @@
 import { dailyTemperatures } from './index';
 
-describe('Daily temperatures', function () {
+describe.only('Daily temperatures', function () {
   it('Daily temperatures', function () {
     const res = dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]);
 

@@ -1,33 +1,24 @@
 export function dailyTemperatures(temperatures: number[]): number[] {
-  const differences: number[] = [];
-  const result = new Array<number>(temperatures.length).fill(0);
+  const stack: number[] = [];
+  const result: number[] = [];
 
-  for (let i = 0; i < temperatures.length - 1; i++) {
-    differences[i] = temperatures[i] - temperatures[i + 1];
-  }
-
-  for (let i = 0; i < temperatures.length - 1; i++) {
-    if (differences[i] < 0) {
-      result[i] = 1;
-    } else {
-      let difference = differences[i];
-      let dayCount = 1;
-      let found = true;
-
-      while (difference >= 0) {
-        difference += differences[i + dayCount];
-
-        if (dayCount++ + i >= differences.length) {
-          found = false;
-          break;
-        }
-      }
-
-      if (found) {
-        result[i] = dayCount;
-      }
+  for (let i = temperatures.length - 1; i >= 0; i--) {
+    while (
+      stack.length &&
+      // Check if current temperature is bigger than the temperature in the last position of the stack
+      temperatures[stack[stack.length - 1]] <= temperatures[i]
+    ) {
+      stack.pop();
     }
+
+    if (!stack.length) {
+      result.push(0);
+    } else {
+      result.push(stack[stack.length - 1] - i);
+    }
+
+    stack.push(i);
   }
 
-  return result;
+  return result.reverse();
 }
