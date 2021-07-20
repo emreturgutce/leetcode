@@ -1,7 +1,7 @@
 import { TreeNode } from '@src/common/tree-node';
 import { kthSmallest } from './index';
 
-describe.only('Kth smallest element in a bst', function () {
+describe('Kth smallest element in a bst', function () {
   const node4 = new TreeNode(2);
   const node3 = new TreeNode(4);
   const node2 = new TreeNode(1, null, node4);
