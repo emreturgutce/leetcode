@@ -1,7 +1,7 @@
 import { TreeNode } from '@src/common/tree-node';
 import { levelOrder } from './index';
 
-describe.only('Binary Tree Level Order Traversal', function () {
+describe('Binary Tree Level Order Traversal', function () {
   it('should return level order traversal', function () {
     const node5 = new TreeNode(15);
     const node4 = new TreeNode(7);
